@@ -1,0 +1,146 @@
+:root {
+    --fondo: #121212;
+    --panel: #1f1f2e;
+    --panel-2: #2a2a3d;
+    --borde: #3a3a52;
+    --texto: #f1f1f6;
+    --suave: #a9a9bd;
+    --cian: #00d0ff;
+    --morado: #6f42c1;
+    --rojo: #d9534f;
+    --verde: #28a745;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.cabecera { text-align: center; padding: 10px 0 20px; }
+.cabecera h1 { color: var(--cian); letter-spacing: 2px; margin: 0 0 8px; font-size: 2rem; }
+.cabecera p { margin: 6px 0; font-size: 0.9rem; }
+.cabecera a { color: #a98bf0; }
+
+/* Tarjeta contenedora */
+.tarjeta {
+    background: var(--panel);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.tarjeta h2 { margin-top: 0; }
+.centro { text-align: center; }
+
+/* Formularios */
+label { display: block; font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 14px;
+    background: var(--panel-2);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    color: var(--texto);
+    font: inherit;
+}
+textarea { min-height: 80px; resize: vertical; }
+
+.dias { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 14px; }
+.dias label { display: flex; align-items: center; gap: 6px; font-weight: 400; margin: 0; }
+.dias input { width: auto; margin: 0; }
+
+/* Botones */
+.btn {
+    display: inline-block;
+    background: var(--morado);
+    color: #fff;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover { filter: brightness(1.15); }
+.btn-full { width: 100%; }
+.btn-cian { background: var(--cian); color: #00111a; padding: 6px 14px; }
+.btn-borde { background: transparent; color: var(--cian); border: 1px solid var(--cian); }
+.form-inline { display: inline; margin: 0; }
+
+/* Mensajes */
+.alerta {
+    background: var(--rojo);
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+.alerta-ok { background: var(--verde); }
+
+/* Tabla de reservas */
+.titulo-fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+.titulo-fila h2 { margin: 0; }
+.tabla-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th { background: var(--panel-2); color: var(--cian); text-align: left; padding: 10px; white-space: nowrap; }
+td { padding: 10px; border-bottom: 1px solid var(--borde); }
+tr:hover td { background: rgba(255, 255, 255, 0.03); }
+
+/* Pase digital */
+.pase {
+    max-width: 420px;
+    margin: 0 auto 20px;
+    padding: 24px;
+    border: 2px dashed var(--cian);
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--panel), var(--panel-2));
+    text-align: center;
+}
+.foto {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--cian);
+    margin-bottom: 12px;
+}
+.foto-vacia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: var(--panel-2);
+}
+.pase h3 { margin: 6px 0 12px; font-size: 1.4rem; }
+.pase p { margin: 6px 0; }
+.nota { font-style: italic; color: var(--suave); }
+.total { color: #2ecc71; font-size: 1.5rem; font-weight: 700; margin-top: 14px; }
